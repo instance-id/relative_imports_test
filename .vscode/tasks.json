@@ -1,0 +1,34 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "flutter_relative_imports",
+            "type": "shell",
+            "windows": {
+                "command": "C:\\files\\relative_imports.exe",
+            },
+            "linux": {
+                "command": "relative_imports",
+            },
+            "osx": {
+                "command": "relative_imports",
+            },
+            "args": [
+                "-p",
+                "${workspaceFolder}",
+                "-f",
+                "${fileBasename}",
+                "-y"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/lib"
+            },
+            "presentation": {
+                "reveal": "silent",
+                "panel": "shared"
+            },
+        }
+    ]
+}
